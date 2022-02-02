@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/fragment_detail_recipes">
+
+    <ImageView
+        android:id="@+id/iv_profile_writer_recipes"
+        android:layout_width="@dimen/general_image_profile_size"
+        android:layout_height="@dimen/general_image_profile_size"
+        android:layout_margin="@dimen/general_parent_margin"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_default_image"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_name_profile_writer_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/general_parent_margin"
+        android:textSize="@dimen/size_text_title3"
+        android:textColor="@color/black_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile_writer_recipes"
+        app:layout_constraintTop_toTopOf="@+id/iv_profile_writer_recipes"
+        tools:text="Wina"/>
+
+    <TextView
+        android:id="@+id/tv_date_upload_profile_writer_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/general_parent_padding"
+        android:layout_marginHorizontal="@dimen/general_parent_margin"
+        android:textSize="@dimen/size_text_default"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile_writer_recipes"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_profile_writer_recipes"
+        tools:text="Desember 15, 2021"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_line_view_size"
+        android:background="@color/gray_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

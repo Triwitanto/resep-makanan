@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/tv_desc_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        android:textSize="@dimen/size_text_desc"
+        android:textColor="@color/black_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Brownies panggang selalu masuk dalam daftar kue yang cocok disajikan di berbagai suasana. Cake populer ini memiliki tekstur padat dengan cita rasa cokelat yang dominan. Dengan bahan utama cokelat pekat atau dark chocolate, rasanya tidak puas jika hanya menyantap sepotong brownies."/>
+
+    <View
+        android:id="@+id/view_desc_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_line_view_size"
+        android:background="@color/gray_line"
+        android:layout_marginTop="@dimen/general_parent_margin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc_recipes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title_ingredient_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        android:textSize="@dimen/size_text_title2"
+        android:textColor="@color/black_text"
+        android:text="@string/text_bahan"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_desc_recipes"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ingredient_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        tools:listitem="@layout/item_general_string"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_ingredient_recipes"/>
+    <View
+        android:id="@+id/view_ingredient_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_line_view_size"
+        android:background="@color/gray_line"
+        android:layout_marginTop="@dimen/general_parent_margin"
+        app:layout_constraintTop_toBottomOf="@+id/rv_ingredient_recipes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title_step_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        android:textSize="@dimen/size_text_title2"
+        android:textColor="@color/black_text"
+        android:text="@string/text_cara_pembuatan"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_ingredient_recipes"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_step_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        tools:listitem="@layout/item_general_string"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_step_recipes"/>
+    <View
+        android:id="@+id/view_step_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_line_view_size"
+        android:background="@color/gray_line"
+        android:layout_marginTop="@dimen/general_parent_margin"
+        app:layout_constraintTop_toBottomOf="@+id/rv_step_recipes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

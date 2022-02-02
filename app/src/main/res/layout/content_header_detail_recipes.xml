@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/fragment_detail_recipes">
+
+    <ImageView
+        android:id="@+id/iv_logo_teams_size_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_default_image"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_logo_teams_recipes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_default_thumb"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_logo_teams_size_recipes"
+        app:layout_constraintEnd_toEndOf="@+id/iv_logo_teams_size_recipes"
+        app:layout_constraintStart_toStartOf="@+id/iv_logo_teams_size_recipes"
+        app:layout_constraintTop_toTopOf="@+id/iv_logo_teams_size_recipes" />
+
+    <TextView
+        android:id="@+id/tv_title_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/general_parent_margin"
+        android:layout_marginStart="@dimen/general_parent_margin"
+        android:layout_marginEnd="@dimen/general_parent_margin"
+        android:textSize="@dimen/size_text_title2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_teams_recipes"
+        tools:text="Resep Brownies Panggang Kacang Mede, Camilan Lezat yang Manjakan Lidah"/>
+
+    <TextView
+        android:id="@+id/tv_dificulty_recipes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        android:padding="@dimen/general_parent_padding"
+        android:textSize="@dimen/size_text_default"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_full_blue_rad5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_recipes"
+        tools:text="Mudah"/>
+
+    <TextView
+        android:id="@+id/tv_times_recipes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        android:padding="@dimen/general_parent_padding"
+        android:textSize="@dimen/size_text_default"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_dificulty_recipes"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_recipes"
+        tools:text="1jam"/>
+
+    <TextView
+        android:id="@+id/tv_portion_recipes"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_parent_margin"
+        android:padding="@dimen/general_parent_padding"
+        android:textSize="@dimen/size_text_default"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_times_recipes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_recipes"
+        tools:text="8 Porsi"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_line_view_size"
+        android:background="@color/gray_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
